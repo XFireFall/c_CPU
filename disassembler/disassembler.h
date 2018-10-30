@@ -10,6 +10,7 @@
 
 #include "../processor/processor.h"
 #include "../lib/asm_language.h"
+#include "../lib/constants.h"
 
 
 /** \brief Prints program interpreted from given code in console and in given file

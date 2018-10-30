@@ -1,7 +1,7 @@
-#define PUSH_( val ) ({Stack_push(STACK,  val);})
-#define POP_( val )  ({Stack_pop (STACK, &val);})
+#define PUSH_( val )    ({Stack_push(STACK,  val);})
+#define POP_( val )     ({Stack_pop (STACK, &val);})
 
-#define CALL_PUSH( ) ({Stack_push(CALL_STACK, PC - PC0 + 1);})
+#define CALL_PUSH( )    ({Stack_push(CALL_STACK, PC - PC0 + 1);})
 #define CALL_POP( val ) ({Stack_pop(CALL_STACK, &st_1); val = (int) st_1;})
 
 //====================================================

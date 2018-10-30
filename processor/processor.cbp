@@ -35,6 +35,7 @@
 			<Option compilerVar="CC" />
 		</Unit>
 		<Unit filename="../lib/asm_language.h" />
+		<Unit filename="../lib/constants.h" />
 		<Unit filename="../lib/stack.c">
 			<Option compilerVar="CC" />
 		</Unit>

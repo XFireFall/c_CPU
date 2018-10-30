@@ -1,4 +1,4 @@
-
+Description of the point of the project "c_CPU", (c) XFireFall
 FILES
  * NOTICE: For detailed description see DoxyGen pages.
 |-------------|-------------------------------------------------------|
@@ -20,26 +20,29 @@ DEATAILS
 
 VARIABLES
  * Allowed variables symbols are 'A'-'Z', 'a'-'z', '0'-'9', and '_'.
- * Allowed variables types are register and anumber.
+ * Allowed variables types are register and number.
  * All the variables are global, keep this in mind when coding assembler functions.
 
 LABELS
  * Allowed labels symbols are 'A'-'Z', 'a'-'z', '0'-'9', and '_'.
  * After the label name there must be ':'.
- * The line right after the ':' will be interpreted as an ordinary line (that allows you to make several labels for ane place and continue program commands right after them).
+ * The line right after the ':' will be interpreted as an ordinary line.
+ * * (That allows you to make several labels for ane place and continue program commands right after them.)
 
 COMMENTS
  * Everything after ';' to the end of line will be interpreted as a comment.
  
 COMMANDS
  * You may add new commands in "lib/asm_commands.h" by adding:
-    DEF_CMD(<command name>, <code of the command>, <number of variables>, {<C-based instruction which describes the command>})
+    DEF_CMD(<command name>, <code of the command>, <number of variables>, 
+    {<C-based instruction which describes the command>})
  * WARNINGS:
  * * Allowed commands symbols are 'A'-'Z', 'a'-'z', '0'-'9', and '_';
  * * Commands names must not repeat;
  * * Commands codes must not repeat;
  * * If any libraries are needed for correct work of given instuction, include them in "lib/processor.h".
- * File "BRIEF_ASM_MANUAL.txt" will detect the changes automatically, but not this one. Please, do not change this manual in any case, instead add your personal commands in "USER_COMMANDS.txt".
+ * File "BRIEF_ASM_MANUAL.txt" will detect the changes automatically, but not this one.
+   Please, do not change this manual in any case, instead add your personal commands in "USER_COMMANDS.txt".
 
  
 |------------------------------------------------| DEFAULT INSTRUCTIONS |-----------------------------------------|

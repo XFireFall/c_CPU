@@ -70,6 +70,7 @@ void print_arg(int argtype, int arg)
 void print_assembler_info()
 {
     FILE* outfile = fopen("../BRIEF_ASM_MANUAL.txt", "w");
+    fprintf(outfile, "THIS IS AUTO-GENERATED TEXT. ALL YOUR IMPROVEMENTS ARE ACTUALLY USELESS HERE.\n\n");
     #define DEF_CMD( name, code, argc, instruction ) \
     {\
         fprintf(outfile, \

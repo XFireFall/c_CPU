@@ -23,8 +23,10 @@ void Labels_dump()
         return;
     }
 
+    int w = width(num_of_labels);
+
     for(int i = 0; i < num_of_labels; ++i)
-        printf("\t%*d) \"%s\" - byte #%d\n", width(num_of_labels - 1), i + 1, Labels[i].name, Labels[i].pos);
+        printf("\t%*d) \"%s\" - byte #%d\n", w, i + 1, Labels[i].name, Labels[i].pos);
 
     return;
 }
@@ -39,9 +41,11 @@ void Variables_dump()
         return;
     }
 
+    int w = width(num_of_variables);
+
     for(int i = 0; i < num_of_variables; ++i)
     {
-        printf("\t%*d) \"%s\" - ", width(num_of_labels - 1), i + 1, Variables[i].name);
+        printf("\t%*d) \"%s\" - ", w, i + 1, Variables[i].name);
         print_arg(Variables[i].type, Variables[i].val);
         printf("\n");
     }
@@ -55,8 +59,10 @@ void print_code(int* code, int byte_count, int bytes_in_line)
 
     printf("\n========"UNDERLINE"CODE"RESET"========\n");
 
+    int w = width(byte_count - 1);
+
     for(int i = 0; i < byte_count; ++i)
-        printf("[%*d] 0x%02X%c", width(byte_count - 1), i, code[i], ((i + 1) % bytes_in_line == 0 || i == byte_count - 1) ? '\n' : ' ');
+        printf("[%*d] 0x%02X%c", w, i, code[i], ((i + 1) % bytes_in_line == 0 || i == byte_count - 1) ? '\n' : ' ');
 
     return;
 }
@@ -172,11 +178,11 @@ int get_arg(char* line, int* arg, int* argtype)
         }
 
     if(assembling == 1)
-        // it may be OK
+        // it may be defined later
         *argtype = LABEL_t;
     else
     {
-        // it is definitely not OK
+        // it is definitely not defined
         printf(RED ALERT"\tUNKNOWN TYPE OF %s\n"RESET, name);
         return 1;
     }

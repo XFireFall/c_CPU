@@ -9,22 +9,10 @@
 
 #include "../lib/strings_int.h"
 #include "../lib/asm_language.h"
-
-#define RED         "\033[0;31m"
-#define GREEN       "\033[0;32m"
-#define PURPLE      "\033[0;35m"
-#define BLUE        "\033[0;34m"
-
-#define RESET       "\033[0m"
-#define UNDERLINE   "\033[4m"
-#define ALERT       "\033[5m"
-
-#define MAX_STR_LEN (100) /**< Maximum of string length */
-#define MAX_LBL_NUM (100) /**< Maximum allowed variables in a program */
-#define MAX_VAR_NUM (100) /**< Maximum allowed labels in a program */
+#include "../lib/constants.h"
 
 
-/** \brief
+/** \brief All labels that were spotted in the program
  *
  * \param pos int - number of the byte to which the label is attached
  * \param name[MAX_STR_LEN] char - name of the label
@@ -36,7 +24,7 @@ struct Label
     char name[MAX_STR_LEN];
 } Labels[MAX_LBL_NUM];
 
-/** \brief
+/** \brief All variables that were spotted in the program
  *
  * \param val int - the actual value of the variable (needs type to be understood correctly)
  * \param type int - type of the variable (according to asm_commands.h)

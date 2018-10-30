@@ -5,29 +5,7 @@
 
 #include <stdio.h>
 
-#define MAX_STR_LEN    (100) /**< Maximum of string length */
-#define MAX_OF_ARGC    (3)   /**< Maximum of commands arguments */
-#define SRAM_CAPACITY  (32)  /**< Capacity of SRAM array */
-#define REG_CAPACITY   (128) /**< Capacity of MAX_OF_ARGC array */
-
-#define RED         "\033[0;31m"
-#define GREEN       "\033[0;32m"
-#define PURPLE      "\033[0;35m"
-#define BLUE        "\033[0;34m"
-
-#define RESET       "\033[0m"
-#define UNDERLINE   "\033[4m"
-#define ALERT       "\033[5m"
-
-//#define DEBUG_PRINTING
-
-#ifdef DEBUG_PRINTING
-#define PRINTF printf
-#else
-#define PRINTF(...)
-#endif // DEBUG
-
-#define GET( var ) ({var = *PC++; PRINTF("(%s is %d)", #var, var);})
+#include "../lib/constants.h"
 
 
 /** \brief All the types used in the assembler

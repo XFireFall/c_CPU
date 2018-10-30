@@ -3,13 +3,14 @@
 	"asm_language.h"
 	"asm_commands.h"
 
-1540579744 /home/oleg/code_blocks_projects/c_CPU/lib/asm_language.h
+1540928296 /home/oleg/code_blocks_projects/c_CPU/lib/asm_language.h
 	<stdio.h>
+	"../lib/constants.h"
 	"asm_commands.h"
 
-1540576410 /home/oleg/code_blocks_projects/c_CPU/lib/asm_commands.h
+1540927999 /home/oleg/code_blocks_projects/c_CPU/lib/asm_commands.h
 
-1540580439 source:/home/oleg/code_blocks_projects/c_CPU/disassembler/main.c
+1540928396 source:/home/oleg/code_blocks_projects/c_CPU/disassembler/main.c
 	"disassembler.h"
 	"../lib/strings_int.h"
 
@@ -17,13 +18,14 @@
 	"processor.h"
 	"../lib/asm_commands.h"
 
-1540494135 /home/oleg/code_blocks_projects/c_CPU/processor/processor.h
+1540928351 /home/oleg/code_blocks_projects/c_CPU/processor/processor.h
 	<stdio.h>
 	<stdlib.h>
 	<math.h>
 	<sys/stat.h>
 	"../lib/stack.h"
 	"../lib/asm_language.h"
+	"../lib/constants.h"
 
 1540495135 /home/oleg/code_blocks_projects/c_CPU/lib/stack.h
 	<stdio.h>
@@ -34,13 +36,14 @@
 1540396269 source:/home/oleg/code_blocks_projects/c_CPU/lib/stack.c
 	"stack.h"
 
-1540495056 /home/oleg/code_blocks_projects/c_CPU/disassembler/disassembler.h
+1540928423 /home/oleg/code_blocks_projects/c_CPU/disassembler/disassembler.h
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<sys/stat.h>
 	"../processor/processor.h"
 	"../lib/asm_language.h"
+	"../lib/constants.h"
 
 1539792711 source:/home/oleg/code_blocks_projects/c_CPU/lib/strings_int.c
 	"strings_int.h"
@@ -52,8 +55,10 @@
 	<assert.h>
 	<ctype.h>
 
-1540495064 source:/home/oleg/code_blocks_projects/c_CPU/disassembler/disassembler.c
+1540582086 source:/home/oleg/code_blocks_projects/c_CPU/disassembler/disassembler.c
 	"disassembler.h"
 	"../lib/asm_commands.h"
 	"../lib/asm_commands.h"
+
+1540927824 /home/oleg/code_blocks_projects/c_CPU/lib/constants.h
 

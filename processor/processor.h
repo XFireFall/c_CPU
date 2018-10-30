@@ -7,8 +7,21 @@
 #include <stdlib.h>
 #include <math.h>
 #include <sys/stat.h>
+
 #include "../lib/stack.h"
 #include "../lib/asm_language.h"
+#include "../lib/constants.h"
+
+//#define DEBUG_PRINTING
+
+#ifdef DEBUG_PRINTING
+#define PRINTF printf
+#else
+#define PRINTF(...)
+#endif // DEBUG
+
+#define GET( var ) ({var = *PC++; PRINTF("(%s is %d)", #var, var);})
+
 
 /** \brief Prints code in hex form: | 0x** 0x** 0x** 0x** |
  *
